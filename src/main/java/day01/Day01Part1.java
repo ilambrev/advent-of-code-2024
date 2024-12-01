@@ -13,8 +13,7 @@ public class Day01Part1 {
         List<Integer> rightList = new ArrayList<>();
 
         while (scanner.hasNextLine()) {
-            int[] row = Arrays.stream(scanner.nextLine()
-                            .split("\\s+"))
+            int[] row = Arrays.stream(scanner.nextLine().split("\\s+"))
                             .mapToInt(Integer::parseInt)
                             .toArray();
             leftList.add(row[0]);
@@ -33,6 +32,6 @@ public class Day01Part1 {
             totalDistance += currentDistance;
         }
 
-        System.out.println(totalDistance);
+        System.out.println("Total distance: " + totalDistance);
     }
 }
