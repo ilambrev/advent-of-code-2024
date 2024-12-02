@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Day02Part1 {
     public static void main(String[] args) throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day2part1data.txt");
+        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day02part1data.txt");
         Scanner scanner = new Scanner(fileInputStream);
 
         int safeReports = 0;
@@ -19,7 +19,7 @@ public class Day02Part1 {
 
             boolean isReportSafe = true;
 
-            if (report[0] >= report[1]) {
+            if (report[0] > report[1]) {
                 for (int i = 1; i < report.length; i++) {
                     int difference = report[i - 1] - report[i];
                     if (difference < 1 || difference > 3) {
@@ -27,7 +27,7 @@ public class Day02Part1 {
                         break;
                     }
                 }
-            } else {
+            } else if (report[0] < report[1]) {
                 for (int i = 1; i < report.length; i++) {
                     int difference = report[i] - report[i - 1];
                     if (difference < 1 || difference > 3) {
@@ -35,6 +35,8 @@ public class Day02Part1 {
                         break;
                     }
                 }
+            } else {
+                isReportSafe = false;
             }
 
             if (isReportSafe) {
