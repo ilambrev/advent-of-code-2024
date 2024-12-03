@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Day02Part2 {
     public static void main(String[] args) throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day02part2data.txt");
+        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day02data.txt");
         Scanner scanner = new Scanner(fileInputStream);
 
         int safeReports = 0;
