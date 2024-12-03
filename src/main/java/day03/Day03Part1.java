@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class Day03Part1 {
     public static void main(String[] args) throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day03part1data.txt");
+        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day03data.txt");
         Scanner scanner = new Scanner(fileInputStream);
         StringBuilder memoryContent = new StringBuilder();
 
