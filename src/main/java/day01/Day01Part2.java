@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Day01Part2 {
     public static void main(String[] args) throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day01part2data.txt");
+        FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day01data.txt");
         Scanner scanner = new Scanner(fileInputStream);
 
         List<Integer> leftList = new ArrayList<>();
