@@ -63,7 +63,11 @@ public class Day05Part2 {
                 int page1 = update[i];
                 update[i] = update[i + 1];
                 update[i + 1] = page1;
-                i = -1;
+                if (i == 0) {
+                    i -= 1;
+                } else {
+                    i -= 2;
+                }
             }
         }
         return update;
