@@ -8,7 +8,6 @@ public class Day06Part2 {
     private static final char GUARD = '^';
     private static final char OBSTRUCTION = '#';
     private static final char EMPTY_SPACE = '.';
-    private static final char VISITED_POSITION = 'X';
 
     public static void main(String[] args) throws FileNotFoundException {
         FileInputStream fileInputStream = new FileInputStream("src/main/resources/files/day06data.txt");
@@ -102,18 +101,6 @@ public class Day06Part2 {
                 break;
         }
         return new int[]{row, col};
-    }
-
-    public static int countGuardSteps(char[][] map) {
-        int steps = 0;
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map[i].length; j++) {
-                if (map[i][j] == VISITED_POSITION) {
-                    steps++;
-                }
-            }
-        }
-        return steps;
     }
 
     public static int[] findGuardPosition(char[][] map) {
