@@ -66,7 +66,7 @@ public class Day07Part1 {
     }
 
     static void generateOperatorsCombinations(String prefix, int numberOfOperations) {
-        char[] operationsTypes = {'+', '*'};
+        char[] operationsTypes = {ADD, MULTIPLY};
         if (numberOfOperations == 0) {
             char[] combination = prefix.toCharArray();
             combinations.add(combination);
