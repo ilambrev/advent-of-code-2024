@@ -21,6 +21,8 @@ public class Day11Part1 {
                 .boxed()
                 .toList();
 
+        scanner.close();
+
         for (int i = 1; i <= BLINKS; i++) {
             stones = blink(stones);
         }
